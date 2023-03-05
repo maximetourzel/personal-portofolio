@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     pageTransition: {
       name: 'page',
       mode: 'out-in'
-    }
+    },
+    baseURL: '/personal-portofolio/' // baseURL: '/<repository>/'
   },
   css: [
     'vuetify/lib/styles/main.sass',
