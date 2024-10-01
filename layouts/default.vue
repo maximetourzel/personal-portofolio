@@ -1,31 +1,50 @@
 <template>
-  <div>
-    <v-app>
-      <v-app-bar title="Application" class="bg-teal-lighten-5">
-        <template #append>
-          <v-btn variant="plain" to="/" selected-class="nav-btn-active">
-            A propos
-          </v-btn>
-          <v-btn variant="plain" to="/experience" nuxt selected-class="nav-btn-active">
-            Expérience
-          </v-btn>
-          <v-btn variant="plain" to="/contact" selected-class="nav-btn-active">
-            Contact
-          </v-btn>
-          <v-btn variant="outlined" color="teal-darken-4">
-            Mon CV
-          </v-btn>
-        </template>
-      </v-app-bar>
-      <v-main>
-        <slot />
-      </v-main>
-    </v-app>
-  </div>
+  <v-app class="d-flex flex-column">
+    <!-- Header Component -->
+    <Header @scroll-to-section="scrollToSection" />
+
+    <!-- Contenu principal -->
+    <v-main class="flex-grow-1">
+      <NuxtPage ref="page" />
+    </v-main>
+
+    <!-- Footer Component -->
+    <Footer />
+  </v-app>
 </template>
 
+<script setup>
+import { useGoTo } from 'vuetify'
+
+const page = ref()
+const goTo = useGoTo()
+
+const scrollToSection = (section) => {
+  let sectionRef = null
+  if (section === 'about') {
+    sectionRef = page.value.pageRef.about
+  } else if (section === 'experiences') {
+    sectionRef = page.value.pageRef.experiences
+  } else if (section === 'skills') {
+    sectionRef = page.value.pageRef.skills
+  } else if (section === 'projects') {
+    sectionRef = page.value.pageRef.projects
+  } else if (section === 'contact') {
+    sectionRef = page.value.pageRef.contact
+  }
+
+  if (sectionRef) {
+    goTo(sectionRef, {
+      duration: 500,
+      offset: -64,
+      easing: 'easeInOutCubic'
+    })
+  }
+}
+</script>
+
 <style scoped>
-.nav-btn-active {
-  text-decoration: underline;
+.v-app {
+  min-height: 100vh;
 }
 </style>

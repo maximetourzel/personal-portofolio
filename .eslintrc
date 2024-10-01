@@ -1,3 +1,20 @@
 {
-  "extends": ["@nuxtjs/eslint-config-typescript"]
+  "extends": ["@nuxtjs/eslint-config-typescript"],
+  "rules": {
+    "vue/multi-word-component-names": [
+      "error", {
+        "ignores": ["header",
+        "footer",
+        "default",
+        "about",
+        "skills",
+        "experiences",
+        "projects",
+        "contact",
+        "index",
+        "info"
+      ]
+      }
+    ]
+  }
 }
