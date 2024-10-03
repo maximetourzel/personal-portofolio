@@ -17,8 +17,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       error: '#D32F2F', // Rouge vif pour les erreurs
       info: '#29B6F6', // Bleu clair pour les informations
       success: '#388E3C', // Vert pour les succès
-      warning: '#FFA000' // Orange pour les avertissements
-    }
+      warning: '#FFA000', // Orange pour les avertissements
+    },
   }
 
   const customDarkTheme: ThemeDefinition = {
@@ -31,8 +31,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       error: '#D32F2F',
       info: '#29B6F6',
       success: '#388E3C',
-      warning: '#FFA000'
-    }
+      warning: '#FFA000',
+    },
   }
 
   const vuetify = createVuetify({
@@ -43,12 +43,12 @@ export default defineNuxtPlugin((nuxtApp) => {
       defaultTheme: 'customDarkTheme',
       themes: {
         customDarkTheme,
-        customLightTheme
-      }
+        customLightTheme,
+      },
     },
     display: {
-      mobileBreakpoint: 'md'
-    }
+      mobileBreakpoint: 'md',
+    },
   })
 
   nuxtApp.vueApp.use(vuetify)

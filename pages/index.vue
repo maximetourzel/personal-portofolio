@@ -1,3 +1,21 @@
+<script setup>
+import { ref } from 'vue'
+
+const about = ref()
+const experiences = ref()
+const skills = ref()
+const projects = ref()
+const contact = ref()
+
+defineExpose({
+  about,
+  experiences,
+  skills,
+  projects,
+  contact,
+})
+</script>
+
 <template>
   <div>
     <v-parallax
@@ -15,39 +33,36 @@
     </v-parallax>
 
     <!-- Section "À propos de moi" -->
-    <About ref="about" class="section-about" />
+    <About
+      ref="about"
+      class="section-about"
+    />
 
     <!-- Section Experiences -->
-    <Experiences ref="experiences" class="section-experience" />
+    <Experiences
+      ref="experiences"
+      class="section-experience"
+    />
 
     <!-- Section "Compétences" -->
-    <Skills ref="skills" class="section-skills" />
+    <Skills
+      ref="skills"
+      class="section-skills"
+    />
 
     <!-- Section "Projets" -->
-    <Projects ref="projects" class="section-projects" />
+    <Projects
+      ref="projects"
+      class="section-projects"
+    />
 
     <!-- Section "Contact" -->
-    <Contact ref="contact" class="section-contact" />
+    <Contact
+      ref="contact"
+      class="section-contact"
+    />
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-const about = ref()
-const experiences = ref()
-const skills = ref()
-const projects = ref()
-const contact = ref()
-
-defineExpose({
-  about,
-  experiences,
-  skills,
-  projects,
-  contact
-})
-</script>
 
 <style scoped>
 .section-home {

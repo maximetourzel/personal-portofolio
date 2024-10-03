@@ -1,42 +1,66 @@
-# Nuxt 3 Minimal Starter
+# Personal Portfolio
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Ce projet est un portfolio personnel développé avec **Nuxt 3** et **Vuetify**. Il présente mes expériences, mes compétences, mes projets...
 
-## Setup
+## Aperçu
 
-Make sure to install the dependencies:
+Le portfolio comprend plusieurs sections :
+
+- **À propos de moi** : Une brève description de mon parcours et de mes compétences.
+- **Expériences** : La timeline de mes expériences professionnelles.
+- **Projets** : Une présentation des projets avec liens vers GitHub.
+- **Compétences techniques** : Une liste des technologies que je maîtrise (Frontend, Backend, Outils DevOps, etc.).
+- **Contact** : Les informations pour me contacter.
+
+## Technologies utilisées
+
+- **Nuxt 3** : Framework de développement pour Vue.js, optimisé pour la génération statique.
+- **Vuetify 3** : Bibliothèque de composants UI Material Design.
+- **SCSS** : Pour la gestion des styles.
+
+## Installation
+
+Clonez le dépôt sur votre machine locale :
 
 ```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
+git clone https://github.com/maximetourzel/personal-portfolio.git
+cd personal-portfolio
 ```
 
-## Development Server
+Installez les dépendances :
 
-Start the development server on http://localhost:3000
+```bash
+npm install
+```
+
+## Utilisation
+
+### En développement
+
+Lancez le projet en mode développement avec Hot Module Replacement :
 
 ```bash
 npm run dev
 ```
 
-## Production
+Le site sera disponible à l'adresse http://localhost:3000
 
-Build the application for production:
+### Génération de la version statique
+
+Pour générer une version statique du site, exécutez :
 
 ```bash
-npm run build
+npm run generate
 ```
 
-Locally preview production build:
+Les fichiers statiques seront générés dans le dossier ``dist``
+
+### Prévisualisation de la version statique
 
 ```bash
 npm run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Licence
+
+Ce projet est sous licence MIT. Vous êtes libre de l'utiliser, le modifier et le redistribuer.

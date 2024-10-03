@@ -1,3 +1,12 @@
+<script setup>
+import { ref } from 'vue'
+import { useDisplay } from 'vuetify'
+
+defineEmits(['scrollToSection'])
+const drawer = ref(false)
+const { mobile } = useDisplay()
+</script>
+
 <template>
   <v-app-bar
     app
@@ -10,26 +19,59 @@
     <v-toolbar-title>mTourzel</v-toolbar-title>
     <v-spacer />
     <!-- Menu hamburger pour mobile -->
-    <v-app-bar-nav-icon v-if="mobile" @click="drawer = !drawer" />
+    <v-app-bar-nav-icon
+      v-if="mobile"
+      @click="drawer = !drawer"
+    />
     <!-- Liens pour écrans moyens et grands -->
-    <div v-else class="d-sm-flex">
-      <v-btn text class="d-sm-flex" @click="$emit('scrollToSection', 'about')">
+    <div
+      v-else
+      class="d-sm-flex"
+    >
+      <v-btn
+        text
+        class="d-sm-flex"
+        @click="$emit('scrollToSection', 'about')"
+      >
         À propos
       </v-btn>
-      <v-btn text class="d-sm-flex" @click="$emit('scrollToSection', 'experiences')">
+      <v-btn
+        text
+        class="d-sm-flex"
+        @click="$emit('scrollToSection', 'experiences')"
+      >
         Experiences
       </v-btn>
-      <v-btn text class="d-sm-flex" @click="$emit('scrollToSection', 'skills')">
+      <v-btn
+        text
+        class="d-sm-flex"
+        @click="$emit('scrollToSection', 'skills')"
+      >
         Skills
       </v-btn>
-      <v-btn text class="d-sm-flex" @click="$emit('scrollToSection', 'projects')">
+      <v-btn
+        text
+        class="d-sm-flex"
+        @click="$emit('scrollToSection', 'projects')"
+      >
         Projets
       </v-btn>
-      <v-btn text class="d-sm-flex" @click="$emit('scrollToSection', 'contact')">
+      <v-btn
+        text
+        class="d-sm-flex"
+        @click="$emit('scrollToSection', 'contact')"
+      >
         Contact
       </v-btn>
-      <v-divider vertical color="white" class="border-opacity-100" />
-      <v-btn class="mx-2" variant="outlined">
+      <v-divider
+        vertical
+        color="white"
+        class="border-opacity-100"
+      />
+      <v-btn
+        class="mx-2"
+        variant="outlined"
+      >
         Mon CV
       </v-btn>
     </div>
@@ -60,13 +102,3 @@
     </v-list>
   </v-navigation-drawer>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-import { useDisplay } from 'vuetify'
-
-const drawer = ref(false)
-const { mobile } = useDisplay()
-
-defineEmits(['scrollToSection'])
-</script>
