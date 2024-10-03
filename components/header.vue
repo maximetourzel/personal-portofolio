@@ -71,6 +71,8 @@ const { mobile } = useDisplay()
       <v-btn
         class="mx-2"
         variant="outlined"
+        href="CV_MAXIME_TOURZEL_2024.pdf"
+        download
       >
         Mon CV
       </v-btn>
