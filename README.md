@@ -2,6 +2,10 @@
 
 Ce projet est un portfolio personnel développé avec **Nuxt 3** et **Vuetify**. Il présente mes expériences, mes compétences, mes projets...
 
+Le site est accessible ici : https://maximetourzel.github.io/personal-portofolio/
+
+![home-page](docs/media/portofolio_home.png)
+
 ## Aperçu
 
 Le portfolio comprend plusieurs sections :
@@ -60,7 +64,3 @@ Les fichiers statiques seront générés dans le dossier ``dist``
 ```bash
 npm run preview
 ```
-
-## Licence
-
-Ce projet est sous licence MIT. Vous êtes libre de l'utiliser, le modifier et le redistribuer.
